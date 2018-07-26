@@ -1,0 +1,9 @@
+# Mock up
+figma
+
+# Free graphics resources
+freepik.com
+unsplash.com
+
+# OOP
+C4 models

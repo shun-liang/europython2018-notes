@@ -1,0 +1,74 @@
+Radoslav Georgiev
+
+# Goals of the talk
+- Productivity
+- Stability
+- Avoid needless abstraction
+- Repeatable pattern of adding/removing features debugging
+
+# Where to put business logic in Django
+- How to define business logic
+
+# Models
+- Defines the relations to be used in 'business logic'
+- Additional business logic can be model validation or in `save()`
+- Models should ONLY take care of the data model and relations
+
+# Business logic in models
+- Properties - OK-ish
+- Validation - OK
+- Save - not OK
+
+# Views and APIs
+- A lot of things can happen in DRF serializers
+
+# DRF Serializers are great
+- Transform Python objects to JSON
+- Transform JSON to Python objects
+- You should not use serializers to creat objects and doing additional business logic
+
+## Alternatives?
+- Extend post of `APIView.post`...NO
+
+# A note on abstraction
+- When putting something into DB, use as little abstraction as possible
+- When getting out something from DB, use as much abstraction as possible, but not overdo it
+
+# So where to put business logic?
+
+## app/services.py
+- Service = A simple, type annotated function
+- Speaks the domain language
+- Every non-trivial operation, where objects are being created, should be a service
+
+## app/selector.py
+- Take care of business logic for fetching data from DB
+- Can handle permissions, filtering, etc
+
+### Selectors vs Model Properties
+- If model properties start making queries on the model's relations or outside the relations, use selectors
+
+## APIs
+- When use services and selectors, all APIs look the same
+- Repeatable pattern
+
+## Serializers
+- Serializers are nested inside the API
+ - Otherwise it's easier to reuse serializers (which is bad)
+- Inline serializers
+
+# Testing
+
+## Testing Models
+- Test custom validation or properties
+- Write tests that does not hit the DB
+
+## Testing services
+- Heavy lifting
+- Mocks a lot to isolate specific parts
+
+## Testing API
+- With this approach there's no need to test API
+- Delegate to integration testing
+
+https://github.com/HackSoftware/Django-Styleguide

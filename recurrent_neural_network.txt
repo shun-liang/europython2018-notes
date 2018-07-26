@@ -1,0 +1,11 @@
+Anmol Krishan Sachdeva
+@greatdevaks
+
+RNN is NN which can persist information
+focus on utilizing the sequential information
+
+Vanishing Gradient Problem
+Exploding Gradient Problem
+
+Long Short-term memory
+grid search

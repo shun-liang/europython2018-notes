@@ -1,0 +1,33 @@
+@hynek
+ox.cx/df
+
+environ
+
+env var can leak
+
+use platform specific k-v/secret management
+
+hashicorp vault
+docker secrets
+
+Make sure you handle SIGTERM (Python is not good at this)
+
+Introspection, readiness for Load Balancer
+no clear structure for naming these endpoints
+- /healthz
+- /__heartbeat__
+- /-/ready
+- /-/readiness
+
+Liveness - does the application reacts to requests
+- /-/healthy
+- /-/liveness
+- __lbheartbeat__
+
+Moar
+- __version__
+- /-/metrics
+- /-/log-level
+
+Good example of Python application
+PyPI

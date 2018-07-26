@@ -1,0 +1,94 @@
+Jiri Benes
+kiwi.com
+
+# Goal
+* Have visibility over your app
+
+# Timeouts
+- Init vs query itself
+- Beware of data manipulation
+
+# Circuit breakers
+- Use for heavily used systems, not absolutely critical stuff
+
+```
+import pybreaker
+```
+
+# Repeaters
+tenacity
+- Beware of data manipulation
+- Don't overload the system
+
+## prevent issues
+- Return specific error codes
+- Budgets/rate-limiting
+- Idempotency tokens
+
+# Async
+Queues, celery, Crons, scheduled tasks
+
+# Let it crash
+- Don't over engineer
+- Don't hide errors
+
+# Disaster recovery
+## Diagnostics/repairs
+
+# Monitoring
+## Resources
+- Responses time
+- Errors
+- Connections
+# SQL queries
+- Timing
+- Explain
+- Slow queries
+## APM
+## From client side
+- Ping endpoint - checks from 3rd party
+## Functionality
+- statsd tags
+- Set up for stuff that breaks
+- Think about reason
+- Think about reaction
+- Runbooks
+## Anomaly detection
+## Server monitoring
+- Hardware resources
+- Web server monitoring: alert on non-2xx requests, define request id
+
+# Alerting
+- Choose appropriate channels
+- Set escalation policies
+- Error tracking
+
+# Logging
+- Don't making debugging hell, log stuff
+- Store important in DB
+- Request ID
+
+# Deployment
+- Autoscaling
+- Autohealing
+ - Auto restart service/process
+ - Auto setup servers in different DCs
+## Web server
+- load limits
+- caching
+- repeqters
+## Web Application Firewall
+
+# Environments
+
+# Testing
+- simulate outage
+
+# Postmortems
+- Info for future
+- Fix properly
+
+# How do you know your monitoring system works?
+- Different monitoring levels
+
+# Managing dependencies

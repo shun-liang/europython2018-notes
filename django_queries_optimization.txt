@@ -1,0 +1,22 @@
+@Donchevlvaylo
+
+# 1 Problem
+Too much SQL queries
+
+## Solutions
+- select_related
+- prefetch_related
+
+# 2 Problem
+Too much data
+
+## Solutions
+- GROUP BY with aggregation (annotate)
+- Subquery
+- Subquery + OuterRef for GROUP BY
+
+# 3 Problem
+Too much queries + too much data
+
+## Solutions
+- ExpressionWrapper

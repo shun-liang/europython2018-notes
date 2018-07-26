@@ -1,0 +1,27 @@
+Business dashboards using Bonobo, Airflow and Grafana
+makersquad.fr
+@rdorgueil
+
+# Product
+Apercite
+
+# Metrics
+Vanity metrics will waste your time
+star and snowflake schema
+
+# ETL
+Bonoho
+
+# Visualize
+Grafana
+
+# Monitor
+Airflow
+
+# Books
+AARRR
+Site Reliability Engineering
+Lean Analytics
+Scaling Lean
+
+aprecite.fr/europython
