@@ -1,0 +1,78 @@
+Rivo Laks
+
+Application ~Programmer~ Interface
+
+# Good APIs
+- Doc
+- Familiarity
+- Lack of friction
+
+# Documentation
+- Often overlooked
+- First impression
+
+## What do we want to see in doc
+- How do I access it?
+ - Do I need a dev account/API key?
+ - Does the examples run without registration for an API key
+ - Root URL, etc
+- Authentication info
+- General encodings, formats, etc
+- Pagination, versioning, etc
+- Common errors
+- Code for getting started
+
+### The endpoints
+- URL and operations
+- Request/response data
+- Optional parameters
+- Permissions etc
+
+### Obsolete docs are worse than missing docs
+- Always autogenerate
+- Usually code >> schema >> docs
+
+### Schema and Autogeneration
+- OpenAPI, Swagger, etc
+- Combine docs and code examples
+- Client libs autogeneration  (any tools?)
+
+## Standardize
+JSON API - https://jsonapi.org/
+### Standardize Structure
+- Responses have predictable, familiar structure
+### Flexibility
+- Configurable fields
+### Errors
+- Needs to both human and machine readable
+
+### Special cases
+- LOTS data
+ - Not include data in the response, but the link to it instead
+
+Most important thing of standardization is to stick to it
+
+## Authentication and Authorization
+### Token Authentication
+- Clients send HTTP data, ala
+```
+Authorization: Token xxxxxxxxxxxxxxxxxxxxxxxx
+
+### OAuth 2.0
+oauthlib
+- For creating platforms
+- Complex, but solves many issues
+
+## Versioning
+### Versioning schemes
+- AcceptHeaderVersioning (DRF)
+ - Difficult to test in browser
+- URLPathVersioning (DRF)
+- Integers (v1) vs dates (2018-07-27)
+ - Dates are less emotional
+ - Either way, make upgrade easy
+## Version Transformers
+Similar to Django middlewares
+- Requests into newser version
+ - Core code is for the latest version
+- Responses into older version

@@ -1,0 +1,97 @@
+@hchasestevens
+
+# Points
+- ASTs ain't scary
+- AST-based tooling for
+ - Static analysis
+ - code completion
+
+# What's an AST
+Abstract Syntax Tree
+```
+x = 1 + 2
+
+import as
+parsed = ast.parse('x = 1 + 2')
+parsed
+
+ast.dump(parsed)
+
+import astor
+astor.dump_tree(parsed.body[0])
+
+%%showast
+1 + 2 + 3
+```
+
+```
+def fn(x)
+    return a(b(c(x)))
+
+import inspect
+inspect.getsource(fn)
+```
+
+# Static analysis
+```
+%%writefile fib.py
+a = 1
+b = 1 + a
+c = b + a
+```
+
+```
+module = ast.parse(open('fib.py').read())
+print(astor.dump_tree(module))
+```
+
+```
+class AssignmentVisitor(ast.NodeVisitor):
+    ...
+```
+
+# astsearch
+```
+%%sh
+astsearch ?=1 /notebook/protobuf
+```
+
+# astpath
+
+# Linting
+```
+%%writefile code.py
+def perform(xs):
+    for group in deprecated_fn(*xs):
+        for item in group:
+            yield f(tem)
+```
+
+bellybutton
+greentreesnakes
+python-ast-explorer
+
+AST manipulation
+- Static: read the source of a program from somewhere and write it back to source
+ - Have to rebuild, redeploy, etc
+- Dynamic: manipulating live code object
+ - e.g. pytest has a lot of AST manipulation
+ - Handling types in protobuf
+
+NodeTransformer
+
+asttools
+
+# DSLs
+- Problem of DSL: we represent them as strings
+ - Hard to read and debug when they appear in the codebase
+- Pony ORM
+
+# Testing
+- cosmic-ray
+
+# What's next for AST
+- Source mapping
+- Easier AST manipulation
+- Backwards compatibility
+ - Small changes/new syntax in the language gets amplified into big and non-backwards compatible changes into AST

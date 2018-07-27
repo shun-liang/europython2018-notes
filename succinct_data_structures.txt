@@ -1,0 +1,17 @@
+Qrator labs
+
+# Succinct data structures
+most famous: BitVector
+
+bytearray
+
+compress bytearray with zlib
+
+# SDSL
+## PySDSL
+pybind11
+## pystantiate
+## pysdsl.int_vector
+## bitcompress
+## ranking bit vectors
+

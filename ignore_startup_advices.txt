@@ -1,0 +1,32 @@
+explosion.ai
+spaCy
+
+# No need to run at a loss
+## Bigger != Better
+ - Software is more expensive to build at scale
+ - Most business ain't 'winner takes all'
+ - Sucks to be in 'winner takes all' market
+
+## Optimize for median (not mean) outcome
+
+# No need for a lot of people
+- Excellence requires authorship
+- Build the right stuff matters much more than building lots of stuff
+
+## Build the team with generalists or complementary skills
+- T-shaped skills vs Tree-shaped skills
+
+# You can make good decisions without testing all your assumptions
+
+## Inverse of survivorship bias
+'We didn't do X and we failed, therefore X would have saved us.'
+autopsy.io
+Actually ppl don't have a good sense of what's going on.
+
+Drop the tournament mentality
+
+# You can't replace logic with data
+Decisive data is the exception, not the rule
+
+# Sell products, not promises
+- fundraising logic: potential > reality

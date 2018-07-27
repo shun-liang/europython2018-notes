@@ -1,0 +1,5 @@
+docker-py
+
+Use pytest fixture to launch a docker container (form docker-py) to run the tests
+
+https://github.com/neilgall/pytest-docker-flask
