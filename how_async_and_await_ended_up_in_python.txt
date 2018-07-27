@@ -1,0 +1,35 @@
+@pgergove_
+
+https://github.com/pgergov/europython-2018
+
+# Threads
+CPU needs constantly switch context and can be deadlocks
+
+# Asynchronous programming
+- Event loop
+ - Queue of events/tasks
+
+## asyncio
+
+### Coroutines
+- Multiple entry points
+
+### Iterable: anything implements __iter__
+
+### Iterator: object representing a stream of data: anything implements __next__, __iter__
+
+### Generator function: body of function that contains `yield`
+`yield` to send value
+`yield from` - chaining generators
+
+### asyncio.coroutine
+
+### types.coroutine
+
+### async
+
+### async def
+
+### await and __await__
+
+Distinct coroutine from generators

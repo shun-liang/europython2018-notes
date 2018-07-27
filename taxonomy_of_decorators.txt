@@ -1,0 +1,6 @@
+A - Argument Changing Decorators – Decorators that change a function’s arguments, including changing its signature
+B - Binding Decorators – Decorators that implement the Descriptor Protocol, such as the builtins: @property, @classmethod, and @staticmethod
+C - Control Flow Decorators – Decorators that change when or whether the function will be called, such as @retry or @lrucache
+D - Descriptive Decorators – Decorators that do not change the function, but create a reference to it elsewhere, like pytest.mark and flask.app.route
+E - Execution Decorators – Decorators that retrieve source code and/or AST and alter it.
+

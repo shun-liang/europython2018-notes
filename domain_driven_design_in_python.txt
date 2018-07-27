@@ -1,0 +1,107 @@
+SixthNORTH
+
+> There are no answers. Only choices.
+
+# DDD is...
+- Brining software closer to the problem domain
+- A systematic approaching intertwining design and development
+
+# Strategic DDD
+
+# Tactical DDD
+## Value Objects
+- Measure quantities or describe characteristics
+- Equivalent values are interchangeable: `__eq__` and `__ne__`
+- Compare by value: `__le__` etc
+- Lack intrinsic identity
+- Self-contained
+- Encapsulated by entities
+- Immutable
+
+## Entity Objects
+- Represent things distinguishable by identity
+ - Identity has to be unique and stable
+- Lifecycle is important
+- Often mutable
+### In Python
+- Distinguish creation and instantiation
+ - Creation via a factory function
+  - Establish invariants of failes
+  - Obtain unique ID
+  - Prefer surrogate factless IDs, e.g. UUIDs
+ - __init__ for instantiation
+  - __init__ accepts ID and all state
+
+# A ubiquitous language in an explicitly bounded context
+## Ubiquitous language
+- Shared team language
+- Context dependent
+- Valid w/ limits of applicability
+- community
+- Shared and single meaning
+- Reduced distance
+- Conversations
+- Naming things in code and docs
+
+# Bounded context
+- defines Limits of applicability
+- Problem space
+- Evolve to exist in solution space
+- Exhibit a bias towards separate models
+- Can be realised as microservices
+
+## Context mapping
+- Integration between bounded context
+ - e.g. User -> Customer
+
+## Aggregates
+- Consistency boundaries
+- Transaction/unit-of-work modifies only one aggregate
+- Eventual consistency between boundaries
+
+### Aggregate Root Entity
+
+### Factories
+
+# Software Architecture
+- The clean architecture
+- The hexagonal architecture
+- The onion architecture
+ - All have DB at the outside
+ - Your application is not about databases
+
+## Plain old Python Objects
+
+# Repositories
+- Storing and retrieving aggregates
+- Put, retrieve, persist, remove
+- Not concerned with transactions
+
+## Collection Oriented
+## Persistence Oriented
+
+# Domain Events
+- Memory of something that affects the domain (not system)
+- Establish causality
+- Named in past-tense
+- Immutable
+- Monotonic UTC timestamp
+- Inc originating aggregate root id
+- Navigation to originating child entities
+
+## Cause and Effect
+### Descriptive Events
+- Validate -> Mutate state -> Descrive the mutation in an event
+- Same sequence of events can have divergent effects
+### Prescriptive Events
+- Validate -> Descrive the mutation in an event -> Apply the event to mutate state
+
+# References
+- The blue book
+- Domain driven design distilled
+- Implement Domain-Drive Design by Vaughn Vernon
+
+# Conference
+- Domain Driven Design Europe
+- DDD Exchange
+- Explore DDD
